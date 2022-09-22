@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.005rem;
+}
+body{
+    overflow-x: hidden;
+}
+.name-logo{
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img{
+    height: 50px;
+}
+.navbar{
+    padding: 0 .8rem;
+    height: 12vh;
+    box-shadow: 0px 10px 10px #3a3a3a11;
+    margin-bottom: 1vh;
+    background-image: linear-gradient(to top, #FEE07D, #FFC30B);
+}
+.navbar-collapse{
+    padding: 1.5vh 2vw;
+    border-radius: 5px;
+}
+.nav-link{
+    color: #000;
+    width: 100%;
+    height: 100%;
+}
+.nav-item{
+    padding: 0 1vw;
+}
+.nav-item:hover{
+    background-color: rgba(63, 63, 63, 0.2);
+    border-radius: 3px;
+}
+.nav-item:hover a{
+    color: #fff;
+}
+.container-fluid{
+    padding: 0;
+}
+.navbar-collapse{
+    flex-grow: 0;
+    z-index: 5;
+}
+.typed{
+    background-color: #FFC30B;
+    padding: 1%;
+    border-radius: 10px;
+}
+.destaque{
+    font-size: 1.2rem;
+}
+.carousel{
+    width: 550px;
+    margin: 0 auto;
+}
+.slide{
+    transition: 1.5s;
+    filter: drop-shadow(7px 5px 10px #3a3a3a2c);
+}
+.slide:hover{
+    filter: drop-shadow(7px 5px 5px #3a3a3a54);
+}
+.carousel img{
+    border-radius: 5px;
+}
+.card{
+    text-align: center;
+    margin: 5% 0;
+    border: none;
+    width: 270px;
+    filter: drop-shadow(10px 5px 10px #3a3a3a2c);
+    transition: .5s;
+}
+.card:hover{
+    filter: drop-shadow(10px 5px 5px #3a3a3a46);
+}
+.card-line .col .card{
+    margin: 2vh auto;
+}
+.btn{
+    background-color: #037DBF;
+    transition: 1s;
+    width: 80%;
+    border: none;
+    font-size: 1.2rem;
+}
+.btn:hover{
+    width: 90%;
+    background-image:linear-gradient(to right, #1A3892, #037DBF) ;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 7vh;
+    box-sizing: border-box;
+    padding: 1% 0;
+    background-image: linear-gradient(to bottom, #FEE07D, #FFC30B);
+}
+@media (max-width: 991px)
+{
+  .carousel
+   {
+    width: 100vw;
+   }
+   .navbar-brand img
+   {
+    height: 40px;
+   }
+   .name-logo
+   {
+    font-size: 1.5rem;
+   }
+   .navbar-collapse
+   {
+    background-color: #fff;
+   }
+}
