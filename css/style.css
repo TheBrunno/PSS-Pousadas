@@ -63,5 +63,6 @@ body{
 .wave{
     position: absolute;
     z-index: 1;
-    top: 4vw;
+    top: 11vh;
+    width: 45vw;
 }

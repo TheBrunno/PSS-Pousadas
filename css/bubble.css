@@ -40,7 +40,10 @@
 }
 @media (max-width: 991px)
 {
-    .circle, .bubble, .wrapper-circle{
+    .circle, .bubble, .wrapper-circle, .wave{
         visibility:hidden;
+    }
+    p{
+        color: #000;
     }
 }
