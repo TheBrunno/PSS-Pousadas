@@ -1,0 +1,46 @@
+.circle{
+    position: absolute;
+    width: 76vw;
+    height: 76vw;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, var(--light-blue) 45%, var(--blue));
+    z-index: 1;
+    top: -30vw;
+    right: -20vw;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+}
+.wrapper-circle{
+    display: flex;
+}
+.bubble{
+    background-color: var(--light-blue);
+    opacity: .8;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    bottom: 0;
+    position: relative;
+    animation: bubble 4.5s infinite;
+}
+.wrapper-circle-one{
+    width: 55vw;
+}
+.wrapper-circle-two{
+    width: 65vw;
+}
+@keyframes bubble {
+    0%{
+        transform: scale(0) translateY(0);
+    }
+    100%{
+        transform: scale(1.2) translateY(-35vw);
+    }
+}
+@media (max-width: 991px)
+{
+    .circle, .bubble, .wrapper-circle{
+        visibility:hidden;
+    }
+}

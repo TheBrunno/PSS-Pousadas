@@ -2,58 +2,22 @@
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.005rem;
+    font-size: 1.05rem;
+    z-index: 2;
+    color: #fff;
+}
+:root{
+    --blue: #2965C0;
+    --light-blue: #5194DB;
 }
 body{
     overflow-x: hidden;
 }
-.name-logo{
-    display: inline-block;
-    font-size: 1.8rem;
-    margin-top: 20px;
-}
-.navbar-brand{
-    display: flex;
-    align-items: center;
-}
-.navbar-brand img{
-    height: 50px;
-}
-.navbar{
-    padding: 0 .8rem;
-    height: 12vh;
-    box-shadow: 0px 10px 10px #3a3a3a11;
-    margin-bottom: 1vh;
-    background-image: linear-gradient(to top, #FEE07D, #FFC30B);
-}
-.navbar-collapse{
-    padding: 1.5vh 2vw;
-    border-radius: 5px;
-}
-.nav-link{
-    color: #000;
-    width: 100%;
-    height: 100%;
-}
-.nav-item{
-    padding: 0 1vw;
-}
-.nav-item:hover{
-    background-color: rgba(63, 63, 63, 0.2);
-    border-radius: 3px;
-}
-.nav-item:hover a{
-    color: #fff;
-}
 .container-fluid{
     padding: 0;
 }
-.navbar-collapse{
-    flex-grow: 0;
-    z-index: 5;
-}
 .typed{
-    background-color: #FFC30B;
+    background-color: var(--blue);
     padding: 1%;
     border-radius: 10px;
 }
@@ -64,6 +28,9 @@ body{
     width: 550px;
     margin: 0 auto;
 }
+.carousel-control-prev, .carousel-control-next{
+    z-index: 2;
+}
 .slide{
     transition: 1.5s;
     filter: drop-shadow(7px 5px 10px #3a3a3a2c);
@@ -73,40 +40,6 @@ body{
 }
 .carousel img{
     border-radius: 5px;
-}
-.card{
-    text-align: center;
-    margin: 5% 0;
-    border: none;
-    width: 270px;
-    filter: drop-shadow(10px 5px 10px #3a3a3a2c);
-    transition: .5s;
-}
-.card:hover{
-    filter: drop-shadow(10px 5px 5px #3a3a3a46);
-}
-.card-line .col .card{
-    margin: 2vh auto;
-}
-.btn{
-    background-color: #037DBF;
-    transition: 1s;
-    width: 80%;
-    border: none;
-    font-size: 1.2rem;
-}
-.btn:hover{
-    width: 90%;
-    background-image:linear-gradient(to right, #1A3892, #037DBF) ;
-}
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 7vh;
-    box-sizing: border-box;
-    padding: 1% 0;
-    background-image: linear-gradient(to bottom, #FEE07D, #FFC30B);
 }
 @media (max-width: 991px)
 {
@@ -126,4 +59,9 @@ footer{
    {
     background-color: #fff;
    }
+}
+.wave{
+    position: absolute;
+    z-index: 1;
+    top: 4vw;
 }
