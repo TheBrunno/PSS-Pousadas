@@ -1,0 +1,28 @@
+.card{
+    text-align: center;
+    margin: 5% 0;
+    border: none;
+    width: 280px;
+    filter: drop-shadow(10px 5px 10px #3a3a3a2c);
+    transition: .5s;
+}
+.card:hover{
+    filter: drop-shadow(10px 5px 5px #3a3a3a46);
+}
+.card-title{
+    color: #000;
+}
+.card-line .col .card{
+    margin: 2vh auto;
+}
+.btn{
+    background-color: #037DBF;
+    transition: 1s;
+    width: 80%;
+    border: none;
+    font-size: 1.2rem;
+}
+.btn:hover{
+    width: 90%;
+    background-image:linear-gradient(to right, #1A3892, #037DBF) ;
+}
