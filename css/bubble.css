@@ -4,7 +4,6 @@
     height: 76vw;
     border-radius: 50%;
     background-image: linear-gradient(to bottom, var(--light-blue) 45%, var(--blue));
-    z-index: 1;
     top: -30vw;
     right: -20vw;
     display: flex;
@@ -36,14 +35,5 @@
     }
     100%{
         transform: scale(1.2) translateY(-35vw);
-    }
-}
-@media (max-width: 991px)
-{
-    .circle, .bubble, .wrapper-circle, .wave{
-        visibility:hidden;
-    }
-    p{
-        color: #000;
     }
 }
