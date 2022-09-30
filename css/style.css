@@ -3,8 +3,19 @@
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.05rem;
-    z-index: 2;
     color: #fff;
+}
+.bubble, .circle{
+    z-index: -2;
+}
+.wave{
+    z-index: -3;
+}
+.card, .msg, .carousel{
+    z-index: 2;
+}
+p{
+    margin: 0 10px;
 }
 :root{
     --blue: #2965C0;
@@ -41,28 +52,42 @@ body{
 .carousel img{
     border-radius: 5px;
 }
-@media (max-width: 991px)
-{
-  .carousel
-   {
-    width: 100vw;
-   }
-   .navbar-brand img
-   {
-    height: 40px;
-   }
-   .name-logo
-   {
-    font-size: 1.5rem;
-   }
-   .navbar-collapse
-   {
-    background-color: #fff;
-   }
-}
 .wave{
     position: absolute;
-    z-index: 1;
     top: 11vh;
     width: 45vw;
+}
+@media (max-width: 991px)
+{
+    .carousel{
+        width: 100vw;
+   }
+    .navbar-brand img{
+        height: 40px;
+   }
+    .name-logo{
+        font-size: 1.5rem;
+   }
+    .navbar-collapse{
+        background-color: var(--light-blue);
+        z-index: 3;
+   }
+    .circle, .bubble, .wrapper-circle, .wave{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    p{
+        color: #000;
+    }
+    footer{
+        position: inherit;
+        background-image: none;
+    }
+    footer .row{
+        background-image: linear-gradient(to top, var(--light-blue), var(--blue) 70%);
+    }
+    footer .col{
+        font-size: 0.915rem;
+    }
 }
