@@ -3,7 +3,7 @@
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.05rem;
-    color: #fff;
+    color: var(--black);
 }
 .bubble, .circle{
     z-index: -2;
@@ -20,6 +20,7 @@ p{
 :root{
     --blue: #2965C0;
     --light-blue: #5194DB;
+    --black: #2b2b2b;
 }
 body{
     overflow-x: hidden;
@@ -57,6 +58,9 @@ body{
     top: 11vh;
     width: 45vw;
 }
+h2, h1{
+    color: var(--black);
+}
 @media (max-width: 991px)
 {
     .carousel{
@@ -90,4 +94,7 @@ body{
     footer .col{
         font-size: 0.915rem;
     }
+}
+.msg h2, .msg p, .destaque{
+    color: #fff;
 }
