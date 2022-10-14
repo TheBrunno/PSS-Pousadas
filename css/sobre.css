@@ -1,0 +1,182 @@
+h1{
+    text-align: center;
+    margin: 20px 0;
+}
+.comment p{
+    margin: 0;
+}
+.prim-title{
+    margin-top: 25px;
+}
+.pss-name{
+    color: var(--blue);
+}
+.att{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+.att h2{
+    text-align: center;
+}
+.icon{
+    color: var(--blue);
+    user-select: none;
+}
+.big-icon{
+    font-size: 80px;
+    display: block;
+}
+.icon-star{
+    color: #F7CF06;
+}
+.card-att{
+    display: flex;
+}
+.sobre-animation{
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    font-size: 37px;
+    background-color: var(--blue);
+    animation: roll 15s infinite;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    margin: 90px 20px 100px 20px;
+    height: 100%;
+}
+.animation-wrapper{
+    height: 90px;
+}
+.atr{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.people{
+    margin-top: 50px;
+}
+.info{
+    display: flex;
+    align-items: center;
+}
+.info img{
+    border-radius: 50%;
+    width: 50px;
+}
+.info figure{
+    margin: 0;
+}
+.container-comments{
+    margin: 0 auto;
+    width: 75%;
+    height: 300px;
+}
+.name-people{
+    font-weight: bold;
+}
+.stars-comment{
+    margin: 15px 0 0 0;
+    position: relative;
+}
+.stars-comment span{
+    font-size: 15px;
+    color: #a5a5a5;
+    margin-left: 20px;
+    position: absolute;
+    right: 25px;
+}
+.carousel-control-prev-icon{
+    background-image: url("../images/bootstrap/chevron-left.svg");
+}
+.carousel-control-next-icon{
+    background-image: url("../images/bootstrap/chevron-right.svg");
+}
+.progress-bar2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-bar2 > span{
+    width: 15px;
+    text-align: center;
+}
+.bar{
+    width: 300px;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    margin: 10px;
+}
+.pontuation-container{
+    display: flex;
+    align-items: center;
+}
+.pontuation-container h3{
+    font-size: 100px;
+}
+.progress-bar-pontuation{
+    margin-right: 20px;
+    text-align: center;
+}
+.people-qtd-av{
+    color: #a5a5a5;
+}
+.progress{
+    background-color: var(--blue);
+}
+.comment-wrapper-container{
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+#bar-five{
+    width: 70%;
+}
+#bar-four{
+    width: 15%;
+}
+#bar-three{
+    width: 10%;
+}
+#bar-two{
+    width: 3%;
+}
+#bar-one{
+    width: 2%;
+}
+@keyframes roll {
+    10% {
+        transform: translateY(-100%);
+    }
+    20% {
+        transform: translateY(-310%);
+    }
+    30% {
+        transform: translateY(-520%);
+    }
+    40%{
+        transform: translateY(-730%);
+    }
+    50%{
+        transform: translateY(-940%);
+    }
+    60%{
+        transform: translateY(-1150%);
+    }
+    70%{
+        transform: translateY(-1360%);
+    }
+    80%{
+        transform: translateY(-1570%);
+    }
+    90%{
+        transform: translateY(-1780%);
+    }
+    100%{
+        transform: translateY(-2000%);
+    }
+}
+body{
+    padding-bottom: 100px;
+}
