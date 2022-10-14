@@ -7,6 +7,7 @@ footer{
     box-sizing: border-box;
     padding: 1%;
     background-image: linear-gradient(to top, var(--light-blue), var(--blue) 70%);
+    z-index: 10;
 }
 footer .col{
     color: #fff;
