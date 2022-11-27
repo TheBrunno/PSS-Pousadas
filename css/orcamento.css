@@ -1,0 +1,109 @@
+.containerOrcamento{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 3vh;
+    user-select: none;
+}
+.choiceWrapper, .viewChoiceWrapper{
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px #3a3a3a2c;
+    width: 700px;
+    height: 460px;
+    padding: 0 20px 0 40px;
+}
+.choiceWrapper h3, .viewChoiceWrapper h3{
+    text-align: center;
+    margin: 15px 0;
+}
+.orcamento-title{
+    padding: 7px 15px 0 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+select, input[type="number"], input[type="button"]{
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    height: 50px;
+}
+select{
+    border: 1px var(--blue) solid;
+}
+form{
+    text-align: center;
+}
+.one-row label{
+    display: block;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.numeroHospedesContainer, .numeroDiariasContainer{
+    border-radius: 7px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+}
+.numeroHospedesContainer button, .numeroDiariasContainer button{
+    font-family: "Roboto Mono", monospace;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 35px;
+    height: 100%;
+    padding: 0 15px 5px 15px;
+    box-sizing: border-box;
+    color: #0e4fb1;
+}
+.numeroHospedesContainer span, .numeroDiariasContainer span{
+    border: 1px var(--blue) solid;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+}
+.numeroHospedesContainer input[type="number"], .numeroDiariasContainer input[type="number"]{
+    text-align: center;
+    height: 100%;
+    display: block;
+    padding: 0 5px;
+    border-radius: 0;
+}
+.servicos-container{
+    display: flex;
+    justify-content: space-around;
+}
+.choiceWrapper .row, .viewChoiceWrapper .row{
+    margin: 30px 0;
+}
+input[type="checkbox"], input[type="radio"]{
+    transform: scale(1.23);
+}
+input[type="button"]{
+    background-color: #fff;
+    border: 2px var(--blue) solid;
+    color: var(--blue);
+    font-weight: 700;
+    width: 150px;
+    border-radius: 100px;
+    transition: .25s;
+}
+input[type="button"]:hover{
+    background-color: var(--blue);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
