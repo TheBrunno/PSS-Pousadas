@@ -1,4 +1,6 @@
 const button = document.querySelector("#btnCalc");
+const containerOrcamento = document.querySelector(".containerOrcamento");
+const previewLocal = document.querySelector(".viewChoiceWrapper");
 
 button.addEventListener('click', () => {
     const idSuite = Number(document.querySelector("#suiteSelect").selectedIndex);
@@ -8,19 +10,67 @@ button.addEventListener('click', () => {
     const servicosAdicionaisCheckbox = document.querySelectorAll(".servicos-container input[type='checkbox']");
 
     const checkLocals = [refeicoesRadioButtons, servicosAdicionaisCheckbox];
+    const precosSuites = [undefined, 1798.36, 2158.03, 3596.72, 2877.37, 2517.70];
+    const nomesSuites = [undefined, 'Suíte Mar', 'Suíte Executiva', 'Suíte Master', 'Suíte Oceano', 'Suíte Praia'];
 
     let totalValor = 0;
+    let refeicao;
+    let servicosAdicionaisNomes = [];
+    let servicosAdicionaisPrecos = [];
+
     if(idSuite !== 0 && nHospedes > 0 && nDiarias > 0){
         for(let i=0; i<2; i++){
             for(e of checkLocals[i]){
                 if(e.checked && e.type == 'radio'){
+                    refeicao = document.querySelector(`label[for="${e.id}"]`).textContent;
                     totalValor+=Number(e.value)*nDiarias*nHospedes;
                 }else if(e.checked && e.type == 'checkbox'){
                     totalValor+=Number(e.value)*nHospedes;
+                    servicosAdicionaisNomes.push(document.querySelector(`label[for="${e.id}"]`).textContent);
+                    servicosAdicionaisPrecos.push(e.value);
                 }
             }
         }
-    }
+        totalValor += precosSuites[idSuite]*nHospedes*nDiarias;
+        previewLocal.classList.remove("notVisible");
+        
+        const leftSidePreviewLocal = document.querySelector("#leftSide");
+        const rightSidePreviewLocal = document.querySelector("#rightSide");
+        const valorPreviewLocal = document.querySelector(".valor");
 
-    console.log(totalValor);
-})
+        leftSidePreviewLocal.innerHTML = '';
+        rightSidePreviewLocal.innerHTML = '';
+        valorPreviewLocal.innerHTML = '';
+
+        leftSidePreviewLocal.innerHTML = `
+            <div class="card" id="orcamentoCard">
+                <img src="../images/suites/photo${idSuite}.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">${nomesSuites[idSuite]}</h5>
+                    <span class="btn btn-primary">${precosSuites[idSuite].toLocaleString('pt-br', { style:'currency', currency:'MEX' })}</span>
+                </div>
+            </div>
+        `;
+        rightSidePreviewLocal.innerHTML+=`
+            <h5 style="margin-top: 20px;">Serviços:</h5>
+            <p>Nº de hóspedes: <span style="font-weight: 700; color: var(--blue);">${nHospedes}</span></p>
+            <p>Nº de diárias: <span style="font-weight: 700; color: var(--blue);">${nDiarias}</span></p>
+            <p>Tipo de refeição: <span style="font-weight: 700; color: var(--blue);">${refeicao}</span></p>
+        `;
+        for(let i=0; i<servicosAdicionaisNomes.length; i++){
+            if(i==0){
+                rightSidePreviewLocal.innerHTML+='<h5 style="margin-top: 20px;">Serviços adicionais: (por pessoa)</h5>';
+            }
+            rightSidePreviewLocal.innerHTML+=`
+                <p>
+                    <span style="font-weight: 700; color: var(--blue);">${servicosAdicionaisNomes[i]}</span> +${Number(servicosAdicionaisPrecos[i]).toLocaleString('pt-br', { style:'currency', currency:'MEX' })}
+                </p>
+            `;
+        }
+        valorPreviewLocal.innerHTML+=`
+            <h5 style="text-align:center;">
+                Valor total: ${totalValor.toLocaleString('pt-br', { style:'currency', currency:'MEX' })}
+            </h5>
+        `;
+    }
+});

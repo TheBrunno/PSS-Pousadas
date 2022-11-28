@@ -21,6 +21,7 @@
     width: 80%;
     border: none;
     font-size: 1.2rem;
+    cursor: auto;
 }
 .btn:hover{
     width: 90%;
