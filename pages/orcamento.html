@@ -66,7 +66,7 @@
                         <div class="row one-row">
                             <div class="col">
                                 <label>Suíte</label>
-                                <select>
+                                <select id="suiteSelect">
                                     <option disabled selected>Selecione uma suíte</option>
                                     <option value="1">Suíte Mar</option>
                                     <option value="2">Suíte Executiva</option>
@@ -80,7 +80,7 @@
                                 <div class="numeroHospedesContainer">
                                     <span>
                                         <button id="menos" onclick="stepper(this, 'numeroHospedesContainer')" form="none"> - </button>
-                                        <input type="number" min="0" max="15" step="1" value="0" readonly>
+                                        <input type="number" min="0" max="15" step="1" value="0" readonly id="nHospedes">
                                         <button id="mais" onclick="stepper(this, 'numeroHospedesContainer')" form="none"> + </button>
                                     </span>
                                 </div>
@@ -90,7 +90,7 @@
                                 <div class="numeroDiariasContainer">
                                     <span>
                                         <button id="menos" onclick="stepper(this, 'numeroDiariasContainer')" form="none"> - </button>
-                                        <input type="number" min="0" max="99" step="1" value="0" readonly>
+                                        <input type="number" min="0" max="99" step="1" value="0" readonly id="nDiarias">
                                         <button id="mais" onclick="stepper(this, 'numeroDiariasContainer')" form="none"> + </button>
                                     </span>
                                 </div>
@@ -101,15 +101,15 @@
                                 <h5>Refeições</h5>
                                 <div class="servicos-container">
                                     <div class="servicos">
-                                        <input type="radio" name="refeicao" id="cafe" checked>
+                                        <input type="radio" name="refeicao" id="cafe" checked value="35.70">
                                         <label for="cafe">Café da manhã</label>
                                     </div>
                                     <div class="servicos">
-                                        <input type="radio" name="refeicao" id="meia">
+                                        <input type="radio" name="refeicao" id="meia" value="71.41">
                                         <label for="meia">Meia Pensão</label>
                                     </div>
                                     <div class="servicos">
-                                        <input type="radio" name="refeicao" id="completa">
+                                        <input type="radio" name="refeicao" id="completa" value="89.26">
                                         <label for="completa">Pensão Completa</label>
                                     </div>
                                 </div>
@@ -120,15 +120,15 @@
                                 <h5>Serviços adicionais:</h5>
                                 <div class="servicos-container">
                                     <div class="servicos">
-                                        <input type="checkbox" id="translado">
+                                        <input type="checkbox" id="translado" value="428.46">
                                         <label for="translado">Translado</label>
                                     </div>
                                     <div class="servicos">
-                                        <input type="checkbox" id="citytour">
+                                        <input type="checkbox" id="citytour" value="749.80">
                                         <label for="citytour">City Tour</label>
                                     </div>
                                     <div class="servicos">
-                                        <input type="checkbox" id="ingresso">
+                                        <input type="checkbox" id="ingresso" value="1606.71">
                                         <label for="ingresso">Ingresso PSS Park</label>
                                     </div>
                                 </div>
@@ -136,7 +136,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <input type="button" value="Calcular">
+                                <input type="button" value="Calcular" id="btnCalc">
                             </div>
                         </div>
                     </form>
@@ -150,5 +150,6 @@
             </footer>
         </div>
         <script src="../js/inputCount.js"></script>
+        <script src="../js/orcamento.js"></script>
     </body>
 </html>
