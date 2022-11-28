@@ -10,7 +10,7 @@ button.addEventListener('click', () => {
     const servicosAdicionaisCheckbox = document.querySelectorAll(".servicos-container input[type='checkbox']");
 
     const checkLocals = [refeicoesRadioButtons, servicosAdicionaisCheckbox];
-    const precosSuites = [undefined, 1798.36, 2158.03, 3596.72, 2877.37, 2517.70];
+    const precosSuites = [undefined, 899.47, 1439.16, 1798.95, 1475.14, 1331.22];
     const nomesSuites = [undefined, 'Suíte Mar', 'Suíte Executiva', 'Suíte Master', 'Suíte Oceano', 'Suíte Praia'];
 
     let totalValor = 0;
@@ -69,8 +69,9 @@ button.addEventListener('click', () => {
         }
         valorPreviewLocal.innerHTML+=`
             <h5 style="text-align:center;">
-                Valor total: ${totalValor.toLocaleString('pt-br', { style:'currency', currency:'MEX' })}
+                Valor total: ${totalValor.toLocaleString('pt-br', { style:'currency', currency:'MEX' })} / <span id="convertedValue"></span>
             </h5>
         `;
+        MXNtoBRL(totalValor);
     }
 });
