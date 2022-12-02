@@ -117,7 +117,6 @@ input[type="button"]:hover{
     border: 0;
     box-shadow: 0 0;
     visibility: hidden;
-
 }
 #orcamentoCard{
     width: 250px;
@@ -125,4 +124,67 @@ input[type="button"]:hover{
 }
 #convertedValue{
     font-size: 1em;
+}
+.viewChoiceWrapper.fadeAnimation, .choiceWrapper.leftAnimation{
+    top: 24%;
+    position: absolute;
+    background-color: #fff;
+}
+
+.viewChoiceWrapper{
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 500ms;
+}
+.choiceWrapper{
+    transition: transform 500ms;
+}
+.card{
+    opacity: 0;
+    transition: trasform 500ms;
+}
+
+.viewChoiceWrapper.fadeAnimation{
+    transform: scale(1);
+    opacity: 1;
+    transform: translateX(55%);
+    z-index: 4;
+}
+.choiceWrapper.leftAnimation{
+    transform: translateX(-55%);
+    z-index: 5;
+}
+.card.appear{
+    opacity: 1;
+    transform: scale(1);
+    animation-name: fadeCard;
+    animation-duration: 400ms;
+}
+
+@keyframes fadeCard {
+    from{
+        opacity: 0;
+    } 
+    to{
+        opacity: 1;
+    }
+}
+.valor{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.erro{
+    color: #f00;
+    font-size: 16px;
+    position: relative;
+}
+.selectError{
+    top: 10px;
+}
+.one-row{
+    margin-bottom: 13px !important;
+}
+.sec-row{
+    margin-top: 10px !important;
 }
