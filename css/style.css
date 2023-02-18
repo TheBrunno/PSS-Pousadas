@@ -94,6 +94,9 @@ h2, h1{
     footer .col{
         font-size: 0.915rem;
     }
+    .msg p{
+        display: none;
+    }
 }
 .msg h2, .msg p, .destaque{
     color: #fff;
